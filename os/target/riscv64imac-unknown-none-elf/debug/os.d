@@ -1,0 +1,1 @@
+/Users/chenzm/Projects/Rust/project/os/target/riscv64imac-unknown-none-elf/debug/os: /Users/chenzm/Projects/Rust/project/os/src/console.rs /Users/chenzm/Projects/Rust/project/os/src/entry.asm /Users/chenzm/Projects/Rust/project/os/src/main.rs /Users/chenzm/Projects/Rust/project/os/src/panic.rs /Users/chenzm/Projects/Rust/project/os/src/sbi.rs
