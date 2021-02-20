@@ -41,6 +41,8 @@ pub extern "C" fn rust_main() -> ! {
         llvm_asm!("ebreak"::::"volatile");
     };
 
+    loop{}
+
     unreachable!();
 
     // panic!("end of rust_main");
