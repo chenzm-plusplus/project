@@ -1,0 +1,17 @@
+/Users/chenzm/Projects/Rust/project/os/target/riscv64imac-unknown-none-elf/debug/deps/os-73fae8f28f6a1b0f: src/main.rs src/console.rs src/panic.rs src/sbi.rs src/interrupt/mod.rs src/interrupt/handler.rs src/interrupt/context.rs src/interrupt/timer.rs src/memory/mod.rs src/memory/config.rs src/memory/heap.rs src/interrupt/./interrupt.asm src/entry.asm
+
+/Users/chenzm/Projects/Rust/project/os/target/riscv64imac-unknown-none-elf/debug/deps/os-73fae8f28f6a1b0f.d: src/main.rs src/console.rs src/panic.rs src/sbi.rs src/interrupt/mod.rs src/interrupt/handler.rs src/interrupt/context.rs src/interrupt/timer.rs src/memory/mod.rs src/memory/config.rs src/memory/heap.rs src/interrupt/./interrupt.asm src/entry.asm
+
+src/main.rs:
+src/console.rs:
+src/panic.rs:
+src/sbi.rs:
+src/interrupt/mod.rs:
+src/interrupt/handler.rs:
+src/interrupt/context.rs:
+src/interrupt/timer.rs:
+src/memory/mod.rs:
+src/memory/config.rs:
+src/memory/heap.rs:
+src/interrupt/./interrupt.asm:
+src/entry.asm:

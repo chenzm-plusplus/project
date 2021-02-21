@@ -18,12 +18,19 @@
 //! - `#![feature(panic_info_message)]`  
 //!   panic! 时，获取其中的信息并打印
 #![feature(panic_info_message)]
+//!
+//! 这句话的意思应该是禁用原先的内存分配方案
+//help: add `#![feature(alloc_error_handler)]` to the crate attributes to enable
+#![feature(alloc_error_handler)]
 
 #[macro_use]
 mod console;
 mod panic;
 mod sbi;
 mod interrupt;
+mod memory;
+
+extern crate alloc;
 
 // 汇编编写的程序入口，具体见该文件
 global_asm!(include_str!("entry.asm"));
@@ -38,6 +45,8 @@ pub extern "C" fn rust_main() -> ! {
     memory::init();
 
     // 动态内存分配测试
+    // use alloc::boxed::Box;
+    // use alloc::vec::Vec;
     use alloc::boxed::Box;
     use alloc::vec::Vec;
     let v = Box::new(5);

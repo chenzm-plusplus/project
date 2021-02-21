@@ -1,3 +1,6 @@
+use super::config::KERNEL_HEAP_SIZE;
+extern crate alloc;
+
 /// 进行动态内存分配所用的堆空间
 /// 
 /// 大小为 [`KERNEL_HEAP_SIZE`]  
@@ -9,12 +12,14 @@ static mut HEAP_SPACE: [u8; KERNEL_HEAP_SIZE] = [0; KERNEL_HEAP_SIZE];
 /// ### `#[global_allocator]`
 /// [`LockedHeap`] 实现了 [`alloc::alloc::GlobalAlloc`] trait，
 /// 可以为全局需要用到堆的地方分配空间。例如 `Box` `Arc` 等
+use buddy_system_allocator::LockedHeap;
 #[global_allocator]
 static HEAP: LockedHeap = LockedHeap::empty();
 
 /// 初始化操作系统运行时堆空间
 pub fn init() {
     // 告诉分配器使用这一段预留的空间作为堆
+    println!("memory::heap::init()");
     unsafe {
         HEAP.lock().init(
             HEAP_SPACE.as_ptr() as usize, KERNEL_HEAP_SIZE
