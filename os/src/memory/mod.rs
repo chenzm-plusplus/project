@@ -9,6 +9,7 @@
 
 pub mod config;
 mod heap;
+mod address;
 
 /// 初始化memory相关的子模块
 /// 

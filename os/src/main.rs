@@ -43,7 +43,7 @@ pub extern "C" fn rust_main() -> ! {
     // 初始化各种模块
     interrupt::init();
     memory::init();
-
+/*
     // 动态内存分配测试
     // use alloc::boxed::Box;
     // use alloc::vec::Vec;
@@ -62,6 +62,14 @@ pub extern "C" fn rust_main() -> ! {
         assert_eq!(value, i);
     }
     println!("heap test passed");
+
+    panic!()
+*/
+    interrupt::init();
+    memory::init();
+
+    // 注意这里的 KERNEL_END_ADDRESS 为 ref 类型，需要加 *
+    println!("{}", *memory::config::KERNEL_END_ADDRESS);
 
     panic!()
 }
